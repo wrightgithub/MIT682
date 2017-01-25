@@ -57,7 +57,7 @@ func TestReElection(t *testing.T) {
 	// disturb the old leader.
 	cfg.connect(leader1)
 	leader2 := cfg.checkOneLeader()
-
+	print("leader2 is ",leader2)
 	// if there's no quorum, no leader should
 	// be elected.
 	cfg.disconnect(leader2)
