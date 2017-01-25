@@ -257,7 +257,7 @@ func (cfg *config) setlongreordering(longrel bool) {
 
 // check that there's exactly one leader.
 // try a few times in case re-elections are needed.
-func (cfg *config) checkOneLeader() int {
+func (cfg *config) 	checkOneLeader() int {
 	for iters := 0; iters < 10; iters++ {
 		time.Sleep(500 * time.Millisecond)
 		leaders := make(map[int][]int)
